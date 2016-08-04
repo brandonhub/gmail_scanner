@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Scoop</title>
+
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBdqElNu53UJI1mrD-3ItiLkDj6zLAIAHY",
+            authDomain: "myscoop-1359.firebaseapp.com",
+            databaseURL: "https://myscoop-1359.firebaseio.com",
+            storageBucket: "myscoop-1359.appspot.com",
+          };
+          firebase.initializeApp(config);
+        </script>
+
+        <script src="https://use.fontawesome.com/d5669f7c93.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class=page>
+            <div class=metanav>
+                {% for message in get_flashed_messages() %}
+                    <div class=flash>{{ message }}</div>
+                {% endfor %}
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
