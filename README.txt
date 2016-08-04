@@ -1,0 +1,1 @@
+This server is set up to scan gmail accounts of authenticated gmail users, and store messages of interest in a sqlite databsase. The server is configured to scan accounts at a specified time interval, without any sort of user input of interaction after proper authentication. I have not yet determined the specefic use case I would like to pursue with this architecture. 
